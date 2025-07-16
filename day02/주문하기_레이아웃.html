@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrap{
+            width: 500px;
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 10px;
+
+            margin: 0 auto;
+        }
+
+
+        .img{
+            width: 350px;
+            height: 350px;
+            /* background-color: blue; */
+            background-image: url('https://i.namu.wiki/i/PGMoq5ELQq5krNpUQhQfnta-xVP4GEgTLIvXphErStLNhtzduXvi2mo3-fUosF_qxRjTLYbw_5JQrCDOZUAZNA.webp');
+            margin: 0 auto;
+            background-size: cover;
+        }
+
+        .info{
+            /* border: 1px solid black; */
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* 주문정보 css */
+        .order-wrap{
+            /* border: 1px solid black; */
+            width: 85%;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        .order-wrap input{
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            /* 박스 안으로 여백을 주니까 튀어나오는게 당연 근데 box 사이즈 쓰면 박스에 맞춰서 조정됨 */
+
+        }
+
+        .order-wrap select{
+            width: 100%;
+            padding: 10px;
+
+        }
+
+        .order-wrap button{
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-top: 10px;
+        }
+
+
+
+
+
+        /* 보통 처음 영역 다 border로 테두리 보이게 한 다음에 마지막에 지움*/
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 상품정보 영역 -->
+         <div class="goods-info">
+            <!-- 상품 이미지 영역 -->
+             <div class="img"></div>
+             <!-- 상품 정보 -->
+              <div class="info">
+                <h2>
+                    대관령 황태
+                </h2>
+                <p>겨울 내내 녹았다 얼었다를 반복한 맛 좋은 대관령 황태입니다.</p>
+                <p>가격 : <span>30,000원</span>/10마리</p>
+              </div>
+         </div>
+         
+         <!-- 주문영역 -->
+          <div class="order-wrap">
+            <div>주문내역</div>
+            <div>주문자 이름<input type="text"></div>
+            <div>수량
+                <select>
+                    <option value="">수량을 선택하세요</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                </select>
+            </div>
+            <div>주문금액<input type="text"></div>
+            <div>전화번호<input type="text"></div>
+            <div><button>주문하기</button></div>
+          </div>
+
+
+    </div>
+</body>
+</html>
