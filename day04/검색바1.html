@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .search-bar{
+            border: 1px solid black;
+            width: 300px;
+            height: 50px;
+            display: flex;
+        }
+
+
+        .search-btn{
+            width: 50px;
+            height: 50px;
+            /* background-color: blueviolet; */
+            border: none;
+
+            /* 배경이미지로 채우기 */
+            background-image: url('https://cdn-icons-png.flaticon.com/512/107/107122.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .search-word {
+            width: 230px;
+            margin-left: 20px;
+            border: 0;
+            outline: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="search-bar">
+        <input class="search-word" type="text">
+        <div class="search-btn"></div>
+    </div>
+</body>
+</html>
