@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+        /* 헤더 */
+        header {
+            width: 100%;
+            height: 100px;
+            background-color: rgb(245, 248, 248);
+            position: relative;
+        }
+
+        .title {
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }
+
+        .search {
+            position: absolute;
+            right: 10px;
+            bottom: 20px;
+
+            /* width: 200px; */
+            height: 40px;
+            background-color: white;
+            border: 1px solid black;
+
+            display: flex;
+        }
+
+        .search input {
+            width: 150px ;
+            border: none;
+            margin-left: 10px;
+        }
+
+        button {
+            width: 40px;
+            height: 40px;
+            background-image: url('../images/검색.png');
+            background-size: cover;
+            align-items: center;
+            border: none;
+        }
+
+        /* nav */
+
+        nav {
+            width: 100%;
+            height: 40px;
+            background-color: rgb(232, 243, 243);
+        }
+
+        .menu {
+            list-style: none;
+            position: absolute;
+            top: 100px;
+            display: flex;
+
+        }
+
+        .menu li {
+            margin-right: 20px;
+            
+        }
+
+        .menu li a{
+            text-decoration: none;
+            color: black;
+        }
+
+
+        /* section */
+
+        section {
+            width: 100%;
+            height: 600px;
+            
+            
+        }
+
+        .ad {
+            display: flex;
+            justify-content: center;
+          
+        }
+
+        .o1 {
+            width: 300px;
+            padding: 20px;
+            list-style: none;
+            border: 0.5px solid rgb(255, 241, 241);
+            margin-right: 10px;
+            text-align: center;
+
+            position: relative;
+        }
+
+        .o1 >div {
+            width: 130px;
+            background-color: black;
+            color: red;
+            padding: 10px;
+
+            position: absolute;
+            top: -20px;
+            left: 15px;
+        }
+
+        /* footer */
+
+        footer {
+            width: 100%;
+            height: 60px;
+            background-color: rgb(233, 239, 239);
+            display: flex;
+        }
+
+        .item {
+            width: 33%;
+            height: 60px;
+            /* border: 1px solid black; */
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="title">
+            <img src="../images/logo.png" alt="로고">
+        </div>
+        <div class="search">
+            <input type="text">
+            <button></button>
+        </div>
+    </header>
+    <!-- nav-->
+    <nav>
+        <ul class="menu">
+            <li><a href="./login.html">로그인</a></li>
+            <li><a href="./joinus.html">회원가입</a></li>
+            <li><a href="./index.html">홈으로</a></li>
+        </ul>
+    </nav>
+    <!-- section -->
+    <section>
+        <ul class="ad">
+            <li class="o1">
+                <div>bigdata</div>
+                <img src="../images/img01.png">
+                <p>프로젝트기반 빅데이터분석 과정</p>
+            </li>
+            <li class="o1">
+                <div>Andiroid</div>
+                <img src="../images/img02.png">
+                <p>자바(JAVA) & 안드로이드 개발자 양성과정</p>
+            </li>
+            <li class="o1">
+                <div>Front</div>
+                <img src="../images/img03.png">
+                <p>Web 기반 프론트엔드 자바개발자 양성과정</p>
+            </li>
+        </ul>
+    </section>
+    <!-- 풋터 -->
+    <footer>
+        <div class="item">
+            <img src="../images/footer_acorn.png">
+        </div>
+        <div class="item">
+            (주) 에이콘이즈 에이콘아카데미(홍대)
+        </div>
+        <div class="item">
+            Cum reiciendis fugiat dolorem
+        </div>
+    </footer>
+</body>
+</html>
