@@ -1,0 +1,12 @@
+"hello" -> 문자열(데이터)
+hello -> 변수로 인식
+
+
+hello="hello"
+
+let a="javascript";
+
+
+ctrl+l 누르면 지워짐
+
+

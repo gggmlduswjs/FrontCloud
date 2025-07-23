@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* header */
+        header{
+            width: 100vw;
+            background-color: #dfdede;
+            /* height: 60px; */
+           
+            
+        }
+
+        header >div {
+            width: 1200px;
+            height: 100%;
+            /* border: 1px solid black; */
+            margin: 0 auto;
+
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+        
+        .a1 {
+            list-style: none;
+            display: flex;
+            
+        }
+
+        .a1 li {
+            margin-right: 10px;
+        }
+
+        .a1 li select {
+            border: none;
+            font-size: 16px;
+            background-color: #dfdede;
+        }
+
+        .a1 li select option {
+            background-color: white;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .a2 {
+            list-style: none;
+            display: flex;
+            
+            
+        }
+
+        .a2 li {
+            margin-left: 20px;
+        }
+
+        .a2 li a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        /* nav */
+        nav {
+            width: 100vw;
+            /* position: relative; */
+        }
+
+        .nav_wrap {
+            width: 1200px;
+            height: 150px;
+            /* border: 1px solid black; */
+            margin: 0 auto;
+            display: flex;
+
+        }
+
+       
+
+      
+
+         /* n1 */
+         nav .n1 {
+            width: 140px;
+            height: 150px;
+            background-color: rgb(54, 84, 255);
+
+            /* position: absolute;
+            top: 0; */
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+          
+
+        }
+
+        .n1_menu {
+            width: 50px;
+            
+            
+        }
+
+        
+
+        .n1_icon{
+            /* border: 1px solid black; */
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .n1_icon div {
+            width: 100%;
+            height: 10px;
+            background-color: white;
+            justify-content: space-between;
+        }
+
+        .n1 p {
+            font-size: 17px;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* n2 */
+
+        .n2 {
+            width: 1060px;
+            height: 150px;
+            /* border: 1px solid black; */
+
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .n2_t {
+            width: 100%;
+            height: 100px;
+            /* border: 1px solid black; */
+
+            display: flex;
+        }
+
+        .logo {
+
+            height: 100px;
+            padding: 10px;
+
+          
+            
+        }
+
+        .n2_t .logo img {
+            width: 200px;
+            margin-top: 20px;
+        }
+
+
+        .search {
+
+            width: 80%;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .m_search {
+            width: 600px;
+            height: 60px;
+            border: 1px solid rgb(54, 84, 255);
+
+            display: flex;
+            align-items: center;
+        }
+
+        .m_search select {
+            width: 200px;
+            height: 100%;
+            border: 0;
+            
+        }
+
+        .m_search input {
+            width: 350px;
+            height: 80%;
+            border: none;
+        }
+
+        .m_search button {
+            width: 40px;
+            height: 40px;
+            background-image: url('../images/3.png');
+            background-size: cover;
+            align-items: center;
+            border: none;
+        }
+
+        .my {
+            width: 80px;
+
+            /* border: 1px solid black; */
+
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+
+            
+            
+        }
+
+        .my img {
+            width: 70px;
+            height: 70px;
+            /* border: 1px solid black; */
+
+            margin: 0 auto;
+        }
+
+        .my p {
+            margin: 0;
+            /* border: 1px solid black; */
+            text-align: center;
+        }
+
+        .bag {
+            width: 80px;
+            /* border: 1px solid black; */
+
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bag img{
+            width: 70px;
+            height: 70px;
+            /* border: 1px solid black; */
+        }
+
+         .bag p {
+            margin: 0;
+            /* border: 1px solid black; */
+            text-align: center;
+        }
+
+
+        /* n2_b */
+
+        .n2_b{
+            width: 100%;
+            height: 50px;
+            /* border: 1px solid black; */
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .n2_b button {
+            width: 40px;
+            height: 40px;
+            
+        }
+
+        .n2_b ul {
+            display: flex;
+            /* border: 1px solid black; */
+            margin: 0;
+            padding: 0;
+        }
+
+        .n2_b ul li {
+            list-style: none;
+            /* border: 1px solid black; */
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+
+
+            margin-right: 10px;
+        }
+
+
+
+        .n2_b ul li >img {
+            width: 30px;
+            height: 30px;
+            /* border: 1px solid black; */
+            margin-right: 5px;
+            display: block;
+        }
+
+        .n2_b button {
+            border: 0;
+        }
+
+
+        /* main */
+        
+
+        main {
+            width: 100vw;
+            /* height: 100px; */
+            border: 1px solid black;
+            
+        }
+
+        /* b1 */
+        
+        .b1 {
+            width: 100%;
+            height: 500px;
+            border: 1px solid black;
+
+            background-image: url('../images/c1.jpg');
+            background-repeat: repeat-x;  /* 가로로 반복 */
+            background-position: top center;
+            background-size: auto 100%;  /* 높이는 꽉, 너비는 원본 */
+            
+        }
+
+        .b1_wrap {
+            width: 1200px;
+            height: 500px;
+            margin: 0 auto;
+            border: 1px solid black;
+            display: flex;
+            justify-content: end;
+        }
+
+        .b1_menu {
+            width: 180px;
+            height: 380px;
+
+            border: 1px solid black;
+            padding: 0;
+            margin-top: 50px;
+            
+        }
+
+        .b1_menu li {
+            list-style: none;
+            width: 180px;
+            height: 60px;
+            background-color: white;
+            border: 1px solid black;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+
+            position: relative;
+
+      
+        }
+
+        .b1_menu li p {
+            /* border: 1px solid black; */
+            width: 60%;
+           
+        }
+
+        .b1_menu li img {
+            /* border: 1px solid black; */
+            width: 40%;
+            height: 60px;
+            background-color: white;
+            display: block;
+            box-sizing: border-box;
+            
+        }
+
+        .hidden_bg{
+
+            width: 100vw;
+            height: 500px;
+            border: 1px solid black;
+            background-color: #ccc;
+
+            position: absolute;
+            display: none;
+
+        }
+
+
+        /* 마우스 올렸을 때 */
+
+
+        .c1:hover .hidden_bg {
+            display: block;
+            top: -55px;
+            right: -470px;
+
+            background-image: url('../images/c1.jpg');
+            background-repeat: repeat-x;  /* 가로로 반복 */
+            background-position: top center;
+            background-size: auto 100%;  /* 높이는 꽉, 너비는 원본 */
+
+        }
+
+        .c2:hover .hidden_bg {
+            display: block;
+            top: -117px;
+            right: -470px;
+
+            background-image: url('../images/c2.png');
+            background-repeat: repeat-x;  /* 가로로 반복 */
+            background-position: top center;
+            background-size: auto 100%;  /* 높이는 꽉, 너비는 원본 */
+
+        }
+
+        .c3:hover .hidden_bg {
+            display: block;
+            top: -179px;
+            right: -470px;
+
+            background-image: url('../images/c3.jpg');
+            background-repeat: repeat-x;  /* 가로로 반복 */
+            background-position: top center;
+            background-size: auto 100%;  /* 높이는 꽉, 너비는 원본 */
+
+        }
+
+
+        .c4:hover .hidden_bg {
+            display: block;
+            top: -244px;
+            right: -470px;
+
+            background-image: url('../images/c4.jpg');
+            background-repeat: repeat-x;  /* 가로로 반복 */
+            background-position: top center;
+            background-size: auto 100%;  /* 높이는 꽉, 너비는 원본 */
+
+        }
+
+
+        .c5:hover .hidden_bg {
+            display: block;
+            top: -304px;
+            right: -470px;
+
+            background-image: url('../images/c5.jpg');
+            background-repeat: repeat-x;  /* 가로로 반복 */
+            background-position: top center;
+            background-size: auto 100%;  /* 높이는 꽉, 너비는 원본 */
+
+        }
+
+
+        .c6:hover .hidden_bg {
+            display: block;
+            top: -368px;
+            right: -470px;
+
+            background-image: url('../images/c6.png');
+            background-repeat: repeat-x;  /* 가로로 반복 */
+            background-position: top center;
+            background-size: auto 100%;  /* 높이는 꽉, 너비는 원본 */
+
+        }
+
+
+        
+        
+
+        /* b2 */
+
+        .b2{
+            width: 100%;
+            border: 1px solid black;
+            /* position: relative; */
+        }
+
+        .b2_wrap {
+            width: 1200px;
+            /* height: 1000px; */
+            border: 1px solid black;
+            margin: 0 auto;
+
+
+            position: relative;
+            
+        }
+
+        .b2_wrap h1 {
+            width: 100%;
+            border: 1px solid black;
+
+        }
+
+
+        .b2_wrap table {
+            width: 100%;
+            border: 1px solid black;
+            border-collapse: separate;
+            border-spacing: 20px;
+            
+        }
+
+        td {
+            /* margin: 10px; */
+            height: 350px;
+            border: 1px solid black;
+        }
+
+        .t1 {
+            background-image: url('../images/t1.jpg');
+            background-position: center;
+            background-size: contain;
+        }
+
+        .t2 {
+            background-image: url('../images/t2.jpg');
+            background-position: center;
+            background-size: contain;
+        }
+
+        .t3 {
+            background-image: url('../images/t3.jpg');
+            background-position: center;
+            background-size: contain;
+        }
+
+        .t4 {
+            background-image: url('../images/t4.jpg');
+            background-position: center;
+            background-size: contain;
+        }
+
+        .t5 {
+            background-image: url('../images/t5.jpg');
+            background-position: center;
+            background-size: contain;
+        }
+
+        .t6 {
+            background-image: url('../images/t6.jpg');
+            background-position: center;
+            background-size: contain;
+        }
+
+        .t7 {
+            background-image: url('../images/t7.jpg');
+            background-position: center;
+            background-size: contain;
+        }
+
+        .t8 {
+            background-image: url('../images/t8.jpg');
+            background-position: center;
+            background-size: contain;
+        }
+
+        .t9 {
+            background-image: url('../images/t9.jpg');
+            background-position: center;
+            background-size: contain;
+        }
+
+        .b2_menu {
+
+            width: 100px;
+            display: flex;
+            flex-wrap: wrap;
+
+            margin: 0;
+            padding: 0;
+
+            position: absolute;
+            top: 10px;
+            right: -120px;
+
+           
+
+        }
+
+        .b2_menu li {
+            list-style: none;
+            width: 100px;
+            height: 140px;
+            border: 1px solid black;
+            margin-top: 10px;
+
+        }
+
+
+        .tm1 {
+            background-image: url('../images/tm1.jpg');
+            background-position: center;
+            background-size: contain;
+        }
+
+        .tm2 {
+            background-image: url('../images/tm2.jpg');
+            background-position: center;
+            background-size: contain;
+        }
+
+        .tm3 {
+            background-image: url('../images/tm3.jpg');
+            background-position: center;
+            background-size: contain;
+        }
+
+        .tm4 {
+            background-image: url('../images/tm4.jpg');
+            background-position: center;
+            background-size: contain;
+        }
+
+        .tm5 {
+            background-image: url('../images/tm5.png');
+            background-position: center;
+            background-size: contain;
+        }
+
+        .tm6 {
+            background-image: url('../images/tm6.png');
+            background-position: center;
+            background-size: contain;
+        }
+
+        .tm7 {
+            background-image: url('../images/tm7.png');
+            background-position: center;
+            background-size: contain;
+        }
+
+        /* 풋터 */
+
+        footer >div {
+            width: 100vw;
+            border: 1px solid black;
+        }
+
+        .f1_wrap {
+            width: 1800px;
+            height: 60px;
+            border: 1px solid black;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .f1_menu {
+            /* width: 80%; */
+            height: 100%;
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0;
+            
+        }
+
+
+        .f1_menu li {
+            padding: 10px;
+            /* height: 40px; */
+            margin: 10px;
+            list-style: none;
+            border: 1px solid black;
+            margin-right: 10px;
+            /* font-size: 15px; */
+        }
+
+        .f1_wrap >select {
+            width: 200px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+
+        .f2_wrap {
+            width: 1800px;
+            /* height: 500px; */
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+
+        .f2_t {
+            width: 100%;
+            height: 200px;
+            border: 1px solid black;
+
+            display: flex;
+            justify-content: center;
+        }
+
+        .f2_t >div {
+            width: 300px;
+            height: 100%;
+            margin-right: 10px;
+            border: 1px solid black;
+        }
+
+        .f2_b {
+            width: 100%;
+            height: 80px;
+            border: 1px solid black;
+            margin: 0;
+            padding: 0;
+
+            display: flex;
+
+        }
+
+        .f2_b li{
+            width: 38%;
+            height: 100%;
+            border: 1px solid black;
+            list-style: none;
+
+        }
+
+        .f3 {
+            width: 100vw;
+            height: 250px;
+            background-color: #797979;
+        }
+
+        
+  
+        
+
+
+
+       
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="a1">
+            <ul class="a1">
+                <li>즐겨찾기</li>
+                <li>
+                    <select>
+                        <option value="">입점신청</option>
+                        <option value="">오픈마켓</option>
+                        <option value="">여행/티켓</option>
+                        <option value="">로켓배송</option>
+                        <option value="">제휴마케팅</option>
+                        <option value="">로켓그로스</option>
+                    </select>
+                </li>
+            </ul>
+            <ul class="a2">
+                <li><a href="../html/login.html">로그인</a></li>
+                <li><a href="../html/joinus.html">회원가입</a></li>
+                <li><a href="">고객센터</a></li>
+                <li><a href="">판매자 가입</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav_wrap">
+            <!-- 왼 -->
+            <div class="n1">
+                <div class="n1_menu">
+                    <div class="n1_icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <p>카테고리</p>
+                    </div>
+            </div>
+            <!-- 오 -->
+            <div class="n2">
+                <div class="n2_t">
+                    <div class="logo">
+                        <img src="../images/logo_coupang.png">
+                    </div>
+                    <div class="search">
+                        <div class="m_search">
+                            <select>
+                                <option value="">전체</option>
+                                <option value="">패션의류/잡화</option>
+                                <option value="">뷰티</option>
+                                <option value="">출산/유아동</option>
+                                <option value="">식품</option>
+                                <option value="">주방용품</option>
+                                <option value="">생활용품</option>
+                                <option value="">홈인테리어</option>
+                                <option value="">가전디지털</option>
+                                <option value="">스포츠/레저</option>
+                                <option value="">자동차용품</option>
+                            </select>
+                            <input type="text">
+                            <button></button>
+                        </div>
+                        <div class="my">
+                            <img src="../images/1.png">
+                            <p>마이쿠팡</p>
+                        </div>
+                        <div class="bag">
+                            <img src="../images/2.png">
+                            <p>장바구니</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="n2_b">
+                    <button></button>
+                    <ul>
+                        <li><img src="../images/m1.png"><sapn>쿠팡플레이</sapn></li>
+                        <li><img src="../images/m2.png">로켓배송</li>
+                        <li><img src="../images/m3.png">로켓프레시</li>
+                        <li><img src="../images/m4.png">다시 구매</li>
+                        <li><img src="../images/m5.png">쿠팡비즈</li>
+                        <li><img src="../images/m6.png">로켓직구</li>
+                        <li><img src="../images/m7.png">골드박스</li>
+                        <li><img src="../images/m8.png">이달의 신상</li>
+                        <li><img src="../images/m9.png">판매자특가</li>
+                    </ul>
+                    <button></button>
+                </div>
+            </div>
+         </div>
+    </nav>
+
+    <main>
+        <div class="b1">
+            <div class="b1_wrap">
+                <ul class="b1_menu">
+                    <li class="c1">
+                        <p>샘표니까 저당도 맛있다</p>
+                        <img src="../images/b1.jpg">
+                        <div class="hidden_bg"></div>
+                    </li>
+                    <li class="c2">
+                        <p>쿠폰해택</p>
+                        <img src="../images/b2.png">
+                        <div class="hidden_bg"></div>
+                    </li>
+                    <li class="c3">
+                        <p>Galaxy Z Fold7 Z Filp 7</p>
+                        <img src="../images/b3.jpg">
+                        <div class="hidden_bg"></div>
+                    </li>
+                    <li class="c4">
+                        <p>IPad Air</p>
+                        <img src="../images/b4.jpg">
+                        <div class="hidden_bg"></div>
+                    </li>
+                    <li class="c5">
+                        <p>새로워진 바리스타 룰스</p>
+                        <img src="../images/b5.png">
+                        <div class="hidden_bg"></div>
+                    </li>
+                    <li class="c6">
+                        <p>여름 한정 스포츠 레저탬</p>
+                        <img src="../images/b6.png">
+                        <div class="hidden_bg"></div>
+                    </li>
+                </ul>
+            </div>              
+        </div>
+
+        <div class="b2">
+            <div class="b2_wrap">
+                <h1>오늘의 발견 <spn>| 오늘 쿠팡이 엄선한 가장 HOT한 상품!</spn></h1>
+                <table>
+                    <tr>
+                        <td class="t1" colspan="2"></td>
+                        <td class="t2" colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td class="t3"></td>
+                        <td class="t4"></td>
+                        <td class="t5"></td>
+                        <td class="t6"></td>
+                    </tr>
+                    <tr>
+                        <td class="t7" colspan="2"></td>
+                        <td class="t8"></td>
+                        <td class="t9"></td>
+                    </tr>
+                </table>
+                <ul class="b2_menu">
+                    <li class="tm1"></li>
+                    <li class="tm2"></li>
+                    <li class="tm3"></li>
+                    <li class="tm4"></li>
+                    <li class="tm5"></li>
+                    <li class="tm6"></li>
+                    <li class="tm7"></li>
+                </ul>
+                
+            </div>
+            
+        </div>
+    </main>
+
+    
+
+
+    <footer>
+        <div class="f1">
+            <div class="f1_wrap">
+                <ul class="f1_menu">
+                    <li>회사소개</li>
+                    <li>Investor Relations</li>
+                    <li>인재채용</li>
+                    <li>입점/재휴문의</li>
+                    <li>공지사항</li>
+                    <li>고객의 소리</li>
+                    <li>이용약관</li>
+                    <li>개인정보 처리방침</li>
+                    <li>쿠팡페이 이용약관</li>
+                    <li>신뢰관리센터</li>
+                    <li>제휴마케팅</li>
+                    <li>광고안내</li>
+                </ul>
+                <select>
+                    <option value="">Global Site</option>
+                </select>
+            </div>
+        </div>
+        <div class="f2">
+            <div class="f2_wrap">
+                <div class="f2_t">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul class="f2_b">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <div class="f3">
+            <div></div>
+            <div></div>
+        </div>
+    </footer>
+</body>
+</html>
