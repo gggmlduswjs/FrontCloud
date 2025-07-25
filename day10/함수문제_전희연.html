@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // 1번
+
+        let num=parseInt(prompt("수를 입력하세요"));
+
+        function 수판별(num){
+
+            if (num%2===0){
+
+                console.log("짝수입니다");
+            }else {
+                console.log("홀수입니다");
+            }
+
+        }
+
+        수판별();
+
+        // 2번
+
+       
+
+        function 성인판단( p_age){
+
+            
+            if(p_age>=20){
+               //  console.log(true);
+               return true;
+            }else{
+              //  console.log(false);
+              return false;
+            }
+        }
+
+
+       //let age=parseInt(prompt("나이를 입력하세요"));
+        let rr=  성인판단(22);
+
+        if( rr==ture){
+            alert(" 구매가능");
+        }else{
+            alert(" 가 ");
+        }
+
+        // return 이 있는 이유 그 값을 보존 리턴 안쓰면 값이 날라가버림
+        // 그리고 함수 밑에 변수 지정
+
+
+
+
+        // 3번
+
+        let k=parseInt(prompt("구구단 단을 입력하세요"))
+
+        function 구구단(k){
+            for(let i=1;i<=9;i++){
+            console.log( k+"*"+i+"="+ k*i+"<br>"); }
+    
+        }
+
+        구구단(k);
+
+        // 4번
+
+        let a=parseInt(prompt("원의 가로 길이를 입력하세요"));
+        let b=parseInt(prompt("원의 세로 길이를 입력하세요"));
+
+        let c =[a/2,b/2]
+
+        function 사각형넓이(c){
+           let result= c[0]*c[1];
+           console.log(result+"cm")
+        };
+
+        사각형넓이(c);
+
+        // 5번
+
+        let num1= parseInt(prompt("첫 번째 수를 입력하세요(더하기)"));
+        let num2= parseInt(prompt("두 번째 수를 입력하세요(더하기)"));
+
+
+        let sum=[num1,num2];
+
+        function 합구하기(sum){
+            let resultSum=sum[0]+sum[1];
+
+            console.log(resultSum);
+        }455
+
+        합구하기(sum);
+
+        // 6번
+
+        let n1 =parseInt(prompt("첫 번째 수를 입력하세요(나누기)"));
+        let n2 =parseInt(prompt("첫 번째 수를 입력하세요(나누기)"));
+
+        let rest =[n1,n2];
+
+        function 나머지구하기(rest){
+            let resultRest=rest[0]%rest[1];
+
+            console.log(resultRest);
+        }
+
+        나머지구하기(rest);
+
+        // 7번
+
+        let star = parseInt(prompt("별의 갯수를 입력하세요"));
+
+        function 별찍기(star){
+
+            for(let k=1;k<=star; k++){ //행, 줄
+
+            for( let i=1;i<=k;i++){
+                document.write("*");
+            }
+
+            document.write("<br>");}
+
+        }
+        별찍기(star);
+
+
+        // {}<-여기 안에 변수 넣으면 여기 안에서만
+        
+
+
+    </script>
+    
+</body>
+</html>
