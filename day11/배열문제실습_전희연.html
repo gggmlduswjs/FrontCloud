@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1번
+        const 과일 = ['apple', 'banana', 'cherry'];
+
+        console.log(과일[0]);
+        console.log(과일[2]);
+
+        // 2번
+        const 컬러 = ['red', 'blue', 'green', 'yellow'];
+
+        console.log(컬러.length);
+
+        //3번
+        const 점수 = [10, 20, 30, 40];
+
+        let sum = 점수[0]+점수[1]+점수[2]+점수[3];
+
+        console.log(sum);
+
+        //4번
+        const 이름 = ['영숙', '순자','영자','옥순','현숙'];
+
+        for(let i=1;i<이름.length;i++){
+
+            console.log (이름[i]);
+
+        }
+
+        // 5번
+        const  numbers = [2, 4, 6, 8, 10];
+
+        for(let i=0;i<numbers.length;i++){
+
+            if ( numbers[i]===7){
+                console.log(true);
+            }else{
+                console.log(false);
+            }
+        }
+
+        // 6번
+
+        const number = [12, 41, 6, 18, 10];
+
+        let max = number[0];
+
+        for(let i=0 ; i<number.length;i++){
+            if (max<number[i]){
+                max=number[i]
+
+                console.log(max);
+
+                
+            }
+
+            
+        }
+
+        //7번
+
+        const kors = [90 ,80, 70, 99, 100];
+
+        let total=0;
+
+        for(let i=0;i<kors.length;i++){
+
+            total=total+kors[i];
+            
+        }
+
+
+        console.log(total);
+
+        let avg = total/kors.length;
+
+        console.log(avg);
+
+
+        //8번
+
+        let count=[];
+
+        for(let i=0;i<=kors.length;i++){
+            if(avg<=kors[i]){
+
+                count.push (kors[i]);
+                
+            }
+           
+
+        }
+
+         console.log(count.length);
+
+        
+
+    
+        
+
+        // 9번
+        const prices = [1000, 1500, 900, 1800, 2000, 1200];
+
+        let pMax=[];
+
+        for(let i=0;i<=prices.length;i++){
+
+            if(1200<=prices[i]){
+
+                pMax.push(prices[i]);
+
+            }
+
+        }
+        
+        console.log(pMax);
+
+        //10번
+        const numBer = [1, 2, 3, 4, 5];
+
+        let a=[];
+
+        for(let i=0;i<numBer.length;i++){
+
+            a.push(numBer[i]*2) ;
+
+        }
+
+        console.log(a);
+
+        // 11번
+
+        let fruits = ["자두", "복숭아", "포도"];
+
+        for(let i=0; i<=fruits.length;i++){
+
+            if(fruits[i]==="자두"){
+                console.log(true);
+            }else{
+                console.log(false);
+            }
+
+        }
+
+
+        //12번
+
+
+
+        for(let i=2;i>=0;i--){
+
+            console.log(fruits[i]);
+        }
+
+        //13번
+
+        let b=[];
+
+
+        
+            for(let i=2;i>=0; i--){     
+                
+                b.push(fruits[i])
+                
+            }
+        
+
+        console.log(b)
+
+
+
+
+    </script>
+</body>
+</html>
