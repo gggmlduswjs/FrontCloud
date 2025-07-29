@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Math 객체 사용하기
+
+        // 0~1 미만의 임의 실수
+        let randomsu= Math.random(); //
+        console.log(randomsu);
+
+        // 배열에서 임의의 index 만들기 (10개=> index : 0~9)
+
+        let result1 = Math.random()*10
+        console.log(result1);
+
+        // 소수 이하 없애기
+        let result2= Math.floor(result1);
+        console.log(result2);
+
+        // 최댓값 구하기
+        let result3= Math.max(3,5);
+        console.log(result3);
+
+        // 최솟값 구하기
+        let result4= Math.min(3,5);
+        console.log(result4);
+
+        // 제곱근 구하기
+        let result5=Math.sqrt(9);
+        console.log(result5);
+
+        // 배열에서 가장 큰 값
+
+        let scores=[90,50,100,70]
+
+        //  ... 하면 다 펼쳐짐 ...연산자 : 스프레드 연산자
+        // Math.max(90,50,100,70);
+        // Math.max(scores[0],scores[1],scores[2],scores[3]);
+        let result6= Math.max(...scores);
+        console.log(result6);
+
+    </script>
+</body>
+</html>
