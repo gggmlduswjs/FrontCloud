@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>비행기 게임</title>
+  <style>
+    #game {
+      width: 400px;
+      height: 600px;
+      background-color: black;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    #player {
+      width: 40px;
+      height: 40px;
+      background-color: blue;
+      position: absolute;
+      bottom: 10px;
+      left: 180px;
+    }
+
+    .bullet {
+      width: 5px;
+      height: 10px;
+      background-color: yellow;
+      position: absolute;
+    }
+
+    .enemy {
+      width: 40px;
+      height: 40px;
+      background-color: red;
+      position: absolute;
+      top: 10px;
+      left: 180px;
+    }
+
+    #controls {
+      width: 400px;
+      margin: 10px auto;
+      text-align: center;
+    }
+
+    button {
+      width: 100px;
+      height: 40px;
+      margin: 5px;
+    }
+  </style>
+
+  <script>
+    const game = document.getElementById("game");
+    const player = document.getElementById("player");
+    const enemy = document.getElementById("enemy");
+    let playerX = 180; // 시작 위치
+
+    // 왼쪽 이동
+    function moveLeft() {
+      if (playerX > 0) {
+        playerX -= 20;
+        player.style.left = playerX + "px";
+      }
+    }
+
+    // 오른쪽 이동
+    function moveRight() {
+      if (playerX < 360) {
+        playerX += 20;
+        player.style.left = playerX + "px";
+      }
+    }
+
+    // 총알 발사
+    function shoot() {
+      const bullet = document.createElement("div");
+      bullet.classList.add("bullet");
+      bullet.style.left = (playerX + 17) + "px";
+      bullet.style.top = "550px";
+      game.appendChild(bullet);
+
+      const move = setInterval(() => {
+        let top = parseInt(bullet.style.top);
+        if (top <= 0) {
+          clearInterval(move);
+          bullet.remove();
+        } else {
+          bullet.style.top = (top - 10) + "px";
+          checkHitSimple(bullet, move); // 충돌 체크
+        }
+      }, 50);
+    }
+
+    // 충돌 확인 
+    function checkHitSimple(bullet, move) {
+      const bulletTop = parseInt(bullet.style.top);
+      const bulletLeft = parseInt(bullet.style.left);
+      const enemyLeft = parseInt(enemy.style.left);
+
+      if (
+            bulletTop <= 50 &&         // 총알이 위로 충분히 올라갔고
+            bulletLeft >= enemyLeft && // 총알이 적의 왼쪽보다 오른쪽에 있고
+            bulletLeft <= enemyLeft + 40 // 총알이 적의 오른쪽보다 왼쪽에 있으면
+            ) {
+            enemy.style.backgroundColor = "gray"; // 피격 표시
+            bullet.remove();
+            clearInterval(move);
+            }
+    }
+  </script>
+</head>
+<body>
+
+  <div id="game">
+    <div id="player"></div>
+    <div class="enemy" id="enemy"></div>
+  </div>
+
+  <div id="controls">
+    <button onclick="moveLeft()">왼쪽</button>
+    <button onclick="shoot()">발사</button>
+    <button onclick="moveRight()">오른쪽</button>
+  </div>
+
+  
+
+</body>
+</html>
