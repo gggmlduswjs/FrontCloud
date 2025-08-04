@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery-wrap {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+
+            margin: 0 auto;
+
+
+            position: relative;
+        }
+
+        .gallery {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+        }
+
+        .prev {
+             width: 50px;
+             height: 50px;
+             border: 1px solid black;
+
+             position: absolute;
+             top: 50%;
+             transform: translateY(-50%);
+             left: -10px;
+
+             text-align: center;
+             line-height: 50px;
+
+        }
+
+        .next {
+             width: 50px;
+             height: 50px;
+             border: 1px solid black;
+
+             position: absolute;
+             top: 50%;
+             transform: translateY(-50%);
+             right: -10px;
+
+             text-align: center;
+             line-height: 50px;
+        }
+
+
+        .title {
+            position: absolute;
+            top: 20px;
+            left: 120px;
+        }
+
+    </style>
+
+
+<script>
+
+    let imgNames=[
+    "https://asset.m-gs.kr/prod/1060940757/1/550",
+    "https://asset.m-gs.kr/prod/1060422518/1/550",
+    "https://asset.m-gs.kr/prod/1061080384/1/550",
+    "https://asset.m-gs.kr/prod/1060194803/1/550",
+    "https://asset.m-gs.kr/prod/1057524645/1/550",
+    "https://asset.m-gs.kr/prod/1061230170/1/550"
+    ]
+
+    const titles=["종근당건강","모르간","종근당건강","지오리안떼","라삐아프","막스스튜디오"];
+
+    let index=0;
+
+    function next(){
+
+        index++;
+
+        if( index >= imgNames.length){
+            index=0;
+        }
+        if(index<0){
+            index =imgNames.length-1;
+        }
+        const gallery=document.querySelector(".gallery");
+        gallery.style.backgroundImage="url("+imgNames[index]+")"
+        gallery.style.backgroundPosition="center";
+        gallery.style.backgroundSize ="cover";
+
+        const title=document.querySelector(".title");
+        title.textContent=titles[index];
+
+    }
+
+    function prev(){
+
+        index--;
+
+        if( index >= imgNames.length){
+            index=0;
+        }
+        if(index<0){
+            index =imgNames.length-1;
+        }
+        const gallery=document.querySelector(".gallery");
+        gallery.style.backgroundImage="url("+imgNames[index]+")"
+        gallery.style.backgroundPosition="center";
+        gallery.style.backgroundSize ="cover";
+
+        const title=document.querySelector(".title");
+        title.textContent=titles[index];
+
+
+    }
+
+
+
+</script>
+
+</head>
+<body>
+    <!-- 이미지 갤러리 -->
+    <div class="gallery-wrap">
+        <!-- 이미지 -->
+        <div class="gallery"></div>
+        <!-- 이미지 설명 -->
+        <div class="title">이미지</div>
+        <!-- 갤러리 버튼 -->
+        <div class="prev" onclick="prev()"><<</div>
+        <div class="next" onclick="next()">>></div>
+    </div>
+</body>
+</html>
+

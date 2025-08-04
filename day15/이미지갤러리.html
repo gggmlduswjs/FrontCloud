@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery-wrap{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+
+            margin:  0 auto;
+
+            position: relative;
+        }
+
+        .gallery{
+            width: 300px;
+            height: 300px;
+            border: 1px solid rgb(255, 39, 39);
+        }
+
+
+        .prev {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -10px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 50px;
+
+        }
+
+
+          .next {
+            position: absolute;
+            top: 50%;
+            right: -10px;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- 이미지 갤러리 -->
+    <div class="gallery-wrap">
+        <!-- 이미지 -->
+        <div class="gallery"></div>
+        <!-- 갤러리 버튼 -->
+        <div class="prev"> << </div>
+        <div class="next"> >> </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    
+    .viewMain{
+        border: 1px solid black;
+        width: 800px;
+        height: 800px;
+        display: flex;
+        justify-content: center; /* 수평 중앙 */
+        align-items: center;     /* 수직 중앙 */
+        gap: 20px;               /* 두 박스 간 간격 */
+    }
+    .grid_place{
+        border: 1px solid rgb(236, 128, 4);
+        width: 250px;
+        height: 750px;
+    }
+    .mainpic_place{
+        border: 1px solid rgb(4, 236, 4);
+        width: 500px;
+        height: 750px;
+        
+    }
+    .yajirusi{
+        border: 1px solid rgb(4, 27, 236);
+        width: 250px;
+        height: 25px;
+        text-align: center;
+    }
+    .gridBody{
+        border: 1px solid rgb(231, 5, 252);
+        width: 250px;
+        height: 700px;
+
+        /**/
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* 수직 가운데 정렬 */
+        align-items: center;     /* (선택) 이미지 가운데로 정렬 */
+
+    }
+    .pic_list img{
+        width: 100px;
+        height: 100px;
+        /* 실행시간 설정*/
+            transition: 1s;
+    }
+    .pic_content img{
+        width: 500px;
+        height: 500px;
+    }        
+    .pic_list img:hover{
+        width: 150px;
+        height: 150px;
+    }
+    .yajirusiUp,.yajirusiDown{
+        text-align: center;
+    }
+</style>
+<script>
+    const playlist = [
+        {
+            title: "Cry Baby",
+            artist: "OFFICIAL HIGE DANDISM",
+            note: "애니메이션 [도쿄 리벤저스]",
+            albumCover: "https://upload.wikimedia.org/wikipedia/en/thumb/2/2b/Official_Hige_Dandism_-_Cry_Baby.jpeg/250px-Official_Hige_Dandism_-_Cry_Baby.jpeg"
+        },
+        {
+            title: "Pretender",
+            artist: "OFFICIAL HIGE DANDISM",
+            albumCover: "https://i.namu.wiki/i/QFDYlfcrr0Tnc3Eu3ZXXH8XKU7nc0IwTkj6RNEvLo-U6f9iUOZW1nJe9prm_NJQCy-uVOLD70CoA1xIACACgBzxKirZt6E1n-r1hgNjsZDaDW-SQxbGyt5waBGWRcmUVL8J9rsYwEaevk7Wz9GfFRw.webp"
+        },
+        {
+            title: "Lilac",
+            artist: "Mrs. GREEN APPLE",
+            albumCover: "https://i.namu.wiki/i/t49g0WwEkHIZzqDB0Mk8AZubGQmz9D7hJV-ovY6QmKGqPm-nDLmao4xFJjQ8ruNhRy25mQYqp4hE2mC_oprrvPSNnqM_htA62nulkNOZszNuRvVL2VY7XJmzvGU0x7UN4V49S42hheAhvkY7alWRrg.webp"
+        },
+        {
+            title: "Inferno",
+            artist: "Mrs. GREEN APPLE",
+            albumCover: "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/d6/9e/54/d69e54ca-2d82-f291-d745-9a706aa26940/19UMGIM59475.rgb.jpg/316x316bb.webp",
+            isNowPlaying: true
+        },
+        {
+            title: "青と夏 / Ao To Natsu",
+            artist: "Mrs. GREEN APPLE",
+            albumCover: "https://i.namu.wiki/i/uodKWAMZfBHlUj7vY7Ty-KIJ0_8lHEJrBtc9sAOl33YMEvh3T1pp-s3ScmAvN0AEjB-xAX7RlKsiew5-NEPDZ1sl15ZdInYqgx5h5O604BmtN8XqDHIUrVvf39LpK5ISjlgsD6zlNmx98vAu_ENmwQ.webp"
+        },
+        {
+            title: "Ghost In A Flower",
+            artist: "Yorushika",
+            albumCover: "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Yorushika_-_Ghost_in_a_Flower.png/250px-Yorushika_-_Ghost_in_a_Flower.png"
+        },
+        {
+            title: "LOSER",
+            artist: "Kenshi Yonezu", 
+            albumCover: "https://i.namu.wiki/i/4SdUabXvILGajU28x1xpIzViTA4AF8Qn9PEATuU7YrrTIe5t19a0vCV5fomHPx5B13Kus9BSYGmF72uQf9Dc6Tvdx0V-YYqlGuBalWhAGJpX_aLp8OD1O6hN9pgT7A0s2OaiypmvjwDgz2HCEi7XnA.webp"
+        }
+    ];
+
+const playlist_num=6;
+let setListStart=0;
+window.onload = function() {
+    let gridBody= document.querySelector(".gridBody");
+    let i=0;
+    playlist.forEach(element => {//반환값 없음.
+        if(i<playlist_num){
+            let pic_list= document.createElement("div");
+            pic_list.className="pic_list";
+            
+            let img = document.createElement("img");
+            img.src = element.albumCover;
+            img.alt = element.title;
+            pic_list.addEventListener("click", function () {
+                                        handleClick(this, element);
+                                    });
+            pic_list.appendChild(img);
+
+            pic_list.style.backgroundPosition="center";
+            pic_list.style.backgroundSize="cover";
+
+            gridBody.appendChild(pic_list);
+        }
+        i++;
+    });
+
+};
+
+
+
+function yajirusiUpClick() {
+    const b = playlist.length;
+    // setListStart 한 칸 앞으로 이동 (감소)
+    setListStart--;
+    if (setListStart < 0) {
+        setListStart = b - 1;
+    }
+
+    // 순환해서 새로운 배열을 만듦
+    let newArr = [];
+
+    for (let i = setListStart; i < b; i++) {
+        newArr.push(playlist[i]);
+    }
+    for (let i = 0; i < setListStart; i++) {
+        newArr.push(playlist[i]);
+    }
+
+    // 렌더링
+    renderWithArray(newArr);
+}
+
+function yajirusiDown() {
+    const b = playlist.length;
+    // setListStart 한 칸 뒤로 이동 (증가)
+    setListStart++;
+    if (setListStart >= b) {
+        setListStart = 0;
+    }
+
+    // 순환해서 새로운 배열을 만듦
+    let newArr = [];
+
+    for (let i = setListStart; i < b; i++) {
+        newArr.push(playlist[i]);
+    }
+    for (let i = 0; i < setListStart; i++) {
+        newArr.push(playlist[i]);
+    }
+
+    // 렌더링
+    renderWithArray(newArr);
+}
+
+// 새 배열로 화면 그리기 함수 (기존 renderPlaylist랑 다름)
+function renderWithArray(arr) {
+    const gridBody = document.querySelector(".gridBody");
+    gridBody.innerHTML = "";
+
+    const count = Math.min(playlist_num, arr.length);
+
+    for (let i = 0; i < count; i++) {
+        const element = arr[i];
+        let pic_list = document.createElement("div");
+        pic_list.className = "pic_list";
+
+        let img = document.createElement("img");
+        img.src = element.albumCover;
+        img.alt = element.title;
+
+        pic_list.addEventListener("click", function () {
+            handleClick(this, element);
+        });
+
+        pic_list.appendChild(img);
+        gridBody.appendChild(pic_list);
+    }
+}
+
+
+function handleClick(obj,element) {
+    let pic_content = document.querySelector(".pic_content");
+    let imgElement = obj.querySelector("img"); 
+    // 이미지 복제
+    let clonedImg = imgElement.cloneNode(true);
+    // 기존 내용 비우기
+    pic_content.innerHTML = "";
+    // 복제한 이미지 넣기
+    pic_content.appendChild(clonedImg);
+    const infoDiv = document.createElement("div");
+    infoDiv.innerHTML = `<strong>${element.title}</strong><br>${element.artist}<br>${element.note || ""}`;
+    pic_content.appendChild(infoDiv);
+}
+
+</script>
+</head>
+<body>
+    <div class="viewMain">
+        <div class="grid_place">
+            <div class="yajirusiUp" onclick="yajirusiUpClick()">∧</div>
+            <div class="gridBody">
+                <!--중간 div*6-->
+            </div>
+            <div class="yajirusiDown" onclick="yajirusiDown()">∨</div>
+        </div>
+        <div class="mainpic_place">
+            <div class="mainpic">
+                <div class="pic_content">
+                    <div class="picTitle"></div>
+                    <div class="picContent"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
