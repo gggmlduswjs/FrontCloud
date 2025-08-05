@@ -6,7 +6,7 @@
     <title>Document</title>
     <script>
         // 기능 : 문자가 로드 되었을 때 갤러리 내용을 가져와서 배열로 만들기
-        //  배열의 첫 번째 요소가 갤러리에 보이기
+        // 배열의 첫 번째 요소가 갤러리에 보이기
 
         //입력(매개변수) :
         //반환 : 
@@ -45,10 +45,26 @@
             console.log(index);
         }
     </script>
+
+    <script>
+        // 기능 : 문자가 로드 되었을 때 갤러리 내용 가져와서 배열로 만들기
+        // 배열의 첫 번째 요소가 갤러리에 보이기
+        // 입력(매개변수) :
+        // 반환
+
+        let message=[];
+        let index =0;
+
+        function aa(){
+            const items = document.querySelectorAll(".gallery > div ");
+        }
+
+        
+
+        // 기능 : 갤러리 배열의 다음 텍스트가 나오게 하기 
+    </script>
 </head>
 <body onload="aa()">
-
-
 
     <div class="gallery-wrap">
         <div class="gallery">
@@ -61,4 +77,6 @@
     <button onclick="next()">다음</button>
 
 </body>
+
+
 </html>
