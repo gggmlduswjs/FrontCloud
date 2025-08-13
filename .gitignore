@@ -1,0 +1,20 @@
+# OS/IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# 문서/압축
+*.zip
+*.pdf
+*.rar
+*.7z
+
+# 빌드 산출물(있다면)
+dist/
+build/
+node_modules/
+
+# Windows reserved names
+nul
+NUL
